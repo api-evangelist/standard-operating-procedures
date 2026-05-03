@@ -1,0 +1,79 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "sop": "https://api-evangelist.com/vocab/sop/",
+
+    "StandardOperatingProcedure": "sop:StandardOperatingProcedure",
+    "ProcedureStep": "sop:ProcedureStep",
+    "ProcessDocument": "schema:HowTo",
+    "HowToStep": "schema:HowToStep",
+
+    "id": "@id",
+    "title": "schema:name",
+    "description": "schema:description",
+    "version": "schema:version",
+    "status": "schema:status",
+    "purpose": "schema:abstract",
+    "scope": "dcterms:coverage",
+    "category": "schema:category",
+    "department": "schema:department",
+
+    "effective_date": {
+      "@id": "schema:validFrom",
+      "@type": "xsd:date"
+    },
+    "review_date": {
+      "@id": "schema:expires",
+      "@type": "xsd:date"
+    },
+
+    "steps": {
+      "@id": "schema:step",
+      "@type": "schema:HowToStep",
+      "@container": "@list"
+    },
+    "step_number": "schema:position",
+    "instruction": "schema:text",
+    "expected_output": "sop:expectedOutput",
+    "responsible_role": "schema:worksFor",
+    "decision_point": "sop:decisionPoint",
+
+    "responsibilities": {
+      "@id": "schema:roleName",
+      "@container": "@set"
+    },
+    "role": "schema:roleName",
+    "responsibility": "schema:description",
+
+    "author": {
+      "@id": "schema:author",
+      "@type": "schema:Person"
+    },
+    "approver": {
+      "@id": "sop:approver",
+      "@type": "schema:Person"
+    },
+    "approval_date": {
+      "@id": "sop:approvalDate",
+      "@type": "xsd:date"
+    },
+
+    "regulatory_references": {
+      "@id": "dcterms:conformsTo",
+      "@container": "@set"
+    },
+    "references": {
+      "@id": "dcterms:references",
+      "@container": "@set"
+    },
+
+    "revision_history": {
+      "@id": "sop:revisionHistory",
+      "@container": "@set"
+    },
+    "changes": "sop:changeDescription"
+  }
+}

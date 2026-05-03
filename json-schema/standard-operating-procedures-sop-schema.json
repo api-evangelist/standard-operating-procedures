@@ -1,0 +1,186 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/standard-operating-procedures/refs/heads/main/json-schema/standard-operating-procedures-sop-schema.json",
+  "title": "Standard Operating Procedure",
+  "description": "A formal document defining step-by-step instructions for a routine operation or process to ensure consistent execution, quality, and compliance.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique document identifier (e.g., SOP-QA-001)"
+    },
+    "title": {
+      "type": "string",
+      "description": "Name of the standard operating procedure"
+    },
+    "version": {
+      "type": "string",
+      "description": "Document version number (e.g., 1.0, 2.3)"
+    },
+    "status": {
+      "type": "string",
+      "description": "Current document lifecycle status",
+      "enum": ["draft", "review", "approved", "effective", "retired", "superseded"]
+    },
+    "effective_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the SOP became or becomes effective"
+    },
+    "review_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Scheduled next review date"
+    },
+    "department": {
+      "type": "string",
+      "description": "Organizational department or function that owns the SOP"
+    },
+    "category": {
+      "type": "string",
+      "description": "Process category (e.g., Quality Assurance, Safety, Operations)"
+    },
+    "purpose": {
+      "type": "string",
+      "description": "Brief statement of why this SOP exists and what it achieves"
+    },
+    "scope": {
+      "type": "string",
+      "description": "Who and what processes are covered by this SOP"
+    },
+    "responsibilities": {
+      "type": "array",
+      "description": "Roles and their responsibilities for this procedure",
+      "items": {
+        "type": "object",
+        "properties": {
+          "role": { "type": "string" },
+          "responsibility": { "type": "string" }
+        },
+        "required": ["role", "responsibility"]
+      }
+    },
+    "definitions": {
+      "type": "array",
+      "description": "Glossary of terms specific to this SOP",
+      "items": {
+        "type": "object",
+        "properties": {
+          "term": { "type": "string" },
+          "definition": { "type": "string" }
+        },
+        "required": ["term", "definition"]
+      }
+    },
+    "steps": {
+      "type": "array",
+      "description": "Ordered list of procedure steps",
+      "items": {
+        "$ref": "#/$defs/Step"
+      }
+    },
+    "references": {
+      "type": "array",
+      "description": "Related SOPs, regulations, standards, or documents",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": { "type": "string" },
+          "identifier": { "type": "string" },
+          "url": { "type": "string", "format": "uri" }
+        }
+      }
+    },
+    "author": {
+      "type": "object",
+      "description": "Person or team who created the SOP",
+      "properties": {
+        "name": { "type": "string" },
+        "role": { "type": "string" },
+        "email": { "type": "string", "format": "email" }
+      }
+    },
+    "approver": {
+      "type": "object",
+      "description": "Person who approved the SOP",
+      "properties": {
+        "name": { "type": "string" },
+        "role": { "type": "string" },
+        "approval_date": { "type": "string", "format": "date" }
+      }
+    },
+    "revision_history": {
+      "type": "array",
+      "description": "Log of document revisions",
+      "items": {
+        "type": "object",
+        "properties": {
+          "version": { "type": "string" },
+          "date": { "type": "string", "format": "date" },
+          "author": { "type": "string" },
+          "changes": { "type": "string" }
+        }
+      }
+    },
+    "regulatory_references": {
+      "type": "array",
+      "description": "Specific regulations this SOP helps satisfy (e.g., FDA 21 CFR Part 11)",
+      "items": { "type": "string" }
+    }
+  },
+  "required": ["id", "title", "version", "status", "steps"],
+  "$defs": {
+    "Step": {
+      "type": "object",
+      "description": "A single procedural step in the SOP",
+      "properties": {
+        "step_number": {
+          "type": "integer",
+          "description": "Sequential step number"
+        },
+        "title": {
+          "type": "string",
+          "description": "Short title for the step"
+        },
+        "instruction": {
+          "type": "string",
+          "description": "Detailed instruction for performing the step"
+        },
+        "responsible_role": {
+          "type": "string",
+          "description": "Role responsible for executing this step"
+        },
+        "expected_output": {
+          "type": "string",
+          "description": "What should result from completing this step"
+        },
+        "decision_point": {
+          "type": "boolean",
+          "description": "Whether this step involves a decision with branching logic"
+        },
+        "branches": {
+          "type": "array",
+          "description": "Conditional branches if this is a decision step",
+          "items": {
+            "type": "object",
+            "properties": {
+              "condition": { "type": "string" },
+              "next_step": { "type": "integer" }
+            }
+          }
+        },
+        "cautions": {
+          "type": "array",
+          "description": "Safety or quality cautions relevant to this step",
+          "items": { "type": "string" }
+        },
+        "references": {
+          "type": "array",
+          "description": "Documents, forms, or tools referenced in this step",
+          "items": { "type": "string" }
+        }
+      },
+      "required": ["step_number", "instruction"]
+    }
+  }
+}

@@ -1,0 +1,119 @@
+name: Standard Operating Procedures Vocabulary
+description: >-
+  Vocabulary and taxonomy for Standard Operating Procedures (SOPs) covering
+  process documentation, regulatory compliance, quality management, and
+  organizational operations management.
+created: '2026-05-02'
+modified: '2026-05-02'
+terms:
+  - term: Standard Operating Procedure (SOP)
+    definition: >-
+      A formal, written document providing step-by-step instructions for routine
+      operations or processes. SOPs ensure consistency, repeatability, and compliance
+      by standardizing how tasks are performed across an organization.
+    tags: [Core Concept, Documentation, Quality]
+
+  - term: Document Control
+    definition: >-
+      The systematic management of SOP documents including creation, review,
+      approval, versioning, distribution, and retirement. Document control ensures
+      employees always access the current, approved version of each SOP.
+    tags: [Process Management, Compliance, Quality]
+
+  - term: Effective Date
+    definition: >-
+      The date on which a SOP becomes the active, enforceable procedure. Prior to
+      this date, the document may be in draft or approval stages. Employees must
+      follow SOPs from their effective date.
+    tags: [Document Lifecycle, Compliance]
+
+  - term: Review Cycle
+    definition: >-
+      The scheduled interval at which a SOP must be reviewed and reaffirmed or
+      updated. Regulatory frameworks commonly require annual or biannual review.
+      Documents not reviewed by their review date may be considered expired.
+    tags: [Document Lifecycle, Compliance]
+
+  - term: Process Owner
+    definition: >-
+      The individual or role accountable for maintaining a SOP, ensuring it
+      reflects current practice, and initiating updates when processes change.
+      Typically the department manager or subject matter expert for the process.
+    tags: [Governance, Accountability]
+
+  - term: Approval Authority
+    definition: >-
+      The person(s) authorized to approve a SOP for use, confirming it accurately
+      represents the intended process and meets applicable requirements. May require
+      multiple signatories in regulated environments.
+    tags: [Governance, Compliance, Approval]
+
+  - term: Code of Federal Regulations (CFR)
+    definition: >-
+      The codification of US federal regulations. Many SOPs in regulated industries
+      must reference applicable CFR sections (e.g., FDA 21 CFR Part 11 for
+      electronic records; 29 CFR for OSHA safety).
+    tags: [Regulation, Compliance, Reference]
+
+  - term: GxP
+    definition: >-
+      Good Practice guidelines (GMP, GLP, GCP, GDP) are international quality
+      standards for regulated industries, primarily pharmaceuticals and food.
+      SOPs are the primary mechanism for documenting GxP compliance.
+    tags: [Regulation, Pharmaceutical, Quality]
+
+  - term: Decision Point
+    definition: >-
+      A step in a procedure where the operator must evaluate a condition and
+      follow different subsequent steps based on the outcome. Often represented
+      as a diamond in process flowcharts.
+    tags: [Process Design, Documentation]
+
+  - term: Job Aid
+    definition: >-
+      A simplified, often visual reference (checklist, quick card, poster) derived
+      from an SOP for use at the point of work. Job aids reduce errors by providing
+      just-in-time guidance without requiring memorization of full SOP text.
+    tags: [Training, Operations, Documentation]
+
+  - term: Gap Analysis
+    definition: >-
+      A comparison between current practice and what is required by a SOP, regulation,
+      or standard. Gap analyses identify where SOPs need to be created, updated,
+      or where training is required.
+    tags: [Quality Management, Compliance, Audit]
+
+  - term: Corrective and Preventive Action (CAPA)
+    definition: >-
+      A quality system process for identifying root causes of SOP deviations and
+      implementing corrections to prevent recurrence. SOPs may be updated as a
+      result of CAPA investigations.
+    tags: [Quality, Compliance, Continuous Improvement]
+
+  - term: Deviation
+    definition: >-
+      A documented departure from an approved SOP during execution. Deviations
+      must be recorded, investigated, and, if recurring, addressed through
+      corrective action or SOP revision.
+    tags: [Quality, Compliance, Documentation]
+
+  - term: Audit Trail
+    definition: >-
+      A chronological record of all changes to a SOP and its execution history.
+      Required by many regulations (e.g., 21 CFR Part 11) for electronic SOP
+      systems to ensure data integrity and accountability.
+    tags: [Compliance, Data Integrity, Regulatory]
+
+  - term: SOP Software
+    definition: >-
+      Software platforms for creating, managing, and distributing SOPs including
+      Trainual, SweetProcess, Document360, Guru, Notion, Confluence, and others.
+      Many offer REST APIs for integration with HR, LMS, and QMS systems.
+    tags: [Technology, Platforms, Integration]
+
+  - term: Training Acknowledgment
+    definition: >-
+      A formal record that an employee has read, understood, and agreed to follow
+      a SOP. Training acknowledgments create an audit-ready compliance record
+      demonstrating workforce competency.
+    tags: [Training, Compliance, HR]

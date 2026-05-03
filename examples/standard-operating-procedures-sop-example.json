@@ -1,0 +1,109 @@
+{
+  "id": "SOP-QA-001",
+  "title": "Software Release Quality Assurance Checklist",
+  "version": "2.1",
+  "status": "effective",
+  "effective_date": "2026-01-01",
+  "review_date": "2027-01-01",
+  "department": "Engineering",
+  "category": "Quality Assurance",
+  "purpose": "Ensure all software releases meet quality standards before deployment to production.",
+  "scope": "Applies to all software engineers, QA engineers, and release managers involved in production deployments.",
+  "responsibilities": [
+    {
+      "role": "QA Engineer",
+      "responsibility": "Execute the test plan, document test results, and sign off on release readiness."
+    },
+    {
+      "role": "Release Manager",
+      "responsibility": "Coordinate the release schedule, approve deployment, and communicate status to stakeholders."
+    },
+    {
+      "role": "Software Engineer",
+      "responsibility": "Resolve defects identified during QA and confirm fixes in staging."
+    }
+  ],
+  "steps": [
+    {
+      "step_number": 1,
+      "title": "Code Freeze",
+      "instruction": "Announce code freeze to all engineering teams. No new features may be merged after this point.",
+      "responsible_role": "Release Manager",
+      "expected_output": "Code freeze announcement sent; all feature branches merged or deferred.",
+      "decision_point": false,
+      "cautions": ["Hotfixes for critical security issues may bypass code freeze with manager approval."]
+    },
+    {
+      "step_number": 2,
+      "title": "Deploy to Staging",
+      "instruction": "Deploy the release candidate to the staging environment using the automated deployment pipeline.",
+      "responsible_role": "Release Manager",
+      "expected_output": "Release candidate running on staging environment; deployment log saved.",
+      "decision_point": false
+    },
+    {
+      "step_number": 3,
+      "title": "Execute Regression Test Suite",
+      "instruction": "Run the full automated regression test suite against the staging environment. Document pass/fail results.",
+      "responsible_role": "QA Engineer",
+      "expected_output": "Test report generated with pass rate and list of failures.",
+      "decision_point": true,
+      "branches": [
+        { "condition": "Pass rate >= 98%", "next_step": 4 },
+        { "condition": "Pass rate < 98%", "next_step": 5 }
+      ]
+    },
+    {
+      "step_number": 4,
+      "title": "Conduct Manual Exploratory Testing",
+      "instruction": "Perform manual testing of new features and high-risk areas identified in the release notes.",
+      "responsible_role": "QA Engineer",
+      "expected_output": "Exploratory testing log with any defects filed in the issue tracker.",
+      "decision_point": false
+    },
+    {
+      "step_number": 5,
+      "title": "File and Triage Defects",
+      "instruction": "File defects in the issue tracker. Classify each as Critical, High, Medium, or Low priority.",
+      "responsible_role": "QA Engineer",
+      "expected_output": "All defects logged and triaged.",
+      "decision_point": true,
+      "branches": [
+        { "condition": "No Critical or High defects", "next_step": 6 },
+        { "condition": "Critical or High defects present", "next_step": 3 }
+      ]
+    },
+    {
+      "step_number": 6,
+      "title": "Release Approval",
+      "instruction": "Release Manager reviews test report and approves the release for production deployment.",
+      "responsible_role": "Release Manager",
+      "expected_output": "Written release approval recorded in the project management system.",
+      "decision_point": false
+    },
+    {
+      "step_number": 7,
+      "title": "Deploy to Production",
+      "instruction": "Execute the production deployment during the scheduled maintenance window.",
+      "responsible_role": "Release Manager",
+      "expected_output": "Production deployment complete; smoke tests passing.",
+      "decision_point": false,
+      "cautions": ["Monitor error rates and latency for 30 minutes after deployment."]
+    }
+  ],
+  "author": {
+    "name": "Jane Smith",
+    "role": "QA Lead",
+    "email": "jane.smith@example.com"
+  },
+  "approver": {
+    "name": "John Doe",
+    "role": "Engineering Director",
+    "approval_date": "2025-12-15"
+  },
+  "revision_history": [
+    { "version": "1.0", "date": "2024-01-01", "author": "Jane Smith", "changes": "Initial document" },
+    { "version": "2.0", "date": "2025-01-01", "author": "Jane Smith", "changes": "Added automated regression step" },
+    { "version": "2.1", "date": "2026-01-01", "author": "Jane Smith", "changes": "Updated pass rate threshold to 98%" }
+  ]
+}
