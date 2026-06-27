@@ -23,7 +23,7 @@ common:
   - url: https://en.wikipedia.org/wiki/Standard_operating_procedure
     type: Documentation
   - url: https://www.iso.org/standard/45338.html
-    type: Standard
+    type: Standards
   - url: https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/standard-operating-procedures-sops
     type: Regulatory Guidance
 apis: []
