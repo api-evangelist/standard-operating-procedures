@@ -1,3 +1,15 @@
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/standard-operating-procedures.png
 name: Standard Operating Procedures
 description: >-
   Standard Operating Procedures (SOPs) are documented step-by-step instructions for
