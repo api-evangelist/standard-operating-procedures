@@ -24,6 +24,7 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/standard-operating-procedures.png
 name: Standard Operating Procedures
+kind: topic
 description: >-
   Standard Operating Procedures (SOPs) are documented step-by-step instructions for
   routine operations and processes to ensure consistency, quality, and compliance across
