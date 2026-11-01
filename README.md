@@ -1,4 +1,4 @@
-# Standard Operating Procedures (standard-operating-procedures)
+# standard-operating-procedures
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,55 +64,22 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Standard Operating Procedures (SOPs) are documented step-by-step instructions for routine operations and processes to ensure consistency, quality, and compliance across an organization. They are essential for regulated industries including healthcare, pharmaceuticals, finance, food service, aviation, and manufacturing. SOPs establish clear responsibilities, document institutional knowledge, support regulatory compliance, enable process auditing, and facilitate employee onboarding. Software platforms for SOP management include SweetProcess, Trainual, Guru, Document360, and Notion; many offer developer APIs for embedding SOP workflows into other business systems.
+## standard-operating-procedures on APIs.io
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/standard-operating-procedures/refs/heads/main/apis.yml)
+Everything profiled for standard-operating-procedures is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/standard-operating-procedures/](https://apis.io/providers/standard-operating-procedures/)** — or go straight to one of the APIs or properties below.
 
-## Scope
+## API Evangelist rating
 
-- **Type:** Index
-- **Position:** Consumer
-- **Access:** 3rd-Party
+Not yet rated. See [apis.io/providers/standard-operating-procedures/](https://apis.io/providers/standard-operating-procedures/).
 
-## Tags
+## How this profile is made
 
-- Compliance
-- Documentation
-- Operations
-- Process Management
-- Quality Assurance
-- Regulated Industries
-- Workflow
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-## Timestamps
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for standard-operating-procedures: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-- **Created:** 2025
-- **Modified:** 2026-05-02
+## Open an issue
 
-## Common Properties
-
-- [Wikipedia](https://en.wikipedia.org/wiki/Standard_operating_procedure)
-- [ISO Standard](https://www.iso.org/standard/45338.html)
-- [FDA SOP Guidance](https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/standard-operating-procedures-sops)
-
-## Artifacts
-
-### JSON Schema
-
-- [SOP Schema](json-schema/standard-operating-procedures-sop-schema.json)
-
-### JSON Structure
-
-- [SOP Structure](json-structure/standard-operating-procedures-sop-structure.json)
-
-### JSON-LD
-
-- [Context](json-ld/standard-operating-procedures-context.jsonld)
-
-### Examples
-
-- [Software Release QA SOP](examples/standard-operating-procedures-sop-example.json)
-
-### Vocabulary
-
-- [Standard Operating Procedures Vocabulary](vocabulary/standard-operating-procedures-vocabulary.yml)
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/standard-operating-procedures/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
